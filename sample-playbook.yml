@@ -1,0 +1,11 @@
+---
+- hosts: all
+  roles:
+  - { role: Dynatrace-Agents, tags: agents }
+  - { role: Dynatrace-Collector, tags: collector }
+  - { role: Dynatrace-Fixpack, tags: fixpack }
+  - { role: Dynatrace-License, tags: license }
+  - { role: Dynatrace-Plugin, tags: plugin }
+  - { role: Dynatrace-Server, tags: server, dynatrace_server_linux_service_names: [dynaTraceServer, dynaTraceCollector, dynaTraceWebServerAgent] }
+  - { role: Dynatrace-WebServer-Agent, tags: wsagent }
+  remote_user: deploy

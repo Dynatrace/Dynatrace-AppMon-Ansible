@@ -1,0 +1,42 @@
+[submodule "Dynatrace-Agents"]
+	path = roles/Dynatrace-Agents-Ansible
+	url = https://github.com/Dynatrace/Dynatrace-Agents-Ansible
+[submodule "Dynatrace-Collector"]
+	path = roles/Dynatrace-Collector-Ansible
+	url = https://github.com/Dynatrace/Dynatrace-Collector-Ansible
+[submodule "Dynatrace-Fixpack"]
+	path = roles/Dynatrace-Fixpack-Ansible
+	url = https://github.com/Dynatrace/Dynatrace-Fixpack-Ansible
+[submodule "Dynatrace-License"]
+	path = roles/Dynatrace-License-Ansible
+	url = https://github.com/Dynatrace/Dynatrace-License-Ansible
+[submodule "Dynatrace-Plugin"]
+	path = roles/Dynatrace-Plugin-Ansible
+	url = https://github.com/Dynatrace/Dynatrace-Plugin-Ansible
+[submodule "Dynatrace-Server"]
+	path = roles/Dynatrace-Server-Ansible
+	url = https://github.com/Dynatrace/Dynatrace-Server-Ansible
+[submodule "Dynatrace-WebServer-Agent"]
+	path = roles/Dynatrace-WebServer-Agent-Ansible
+	url = https://github.com/Dynatrace/Dynatrace-WebServer-Agent-Ansible
+[submodule "roles/Dynatrace-Agents"]
+	path = roles/Dynatrace-Agents
+	url = https://github.com/dynaTrace/Dynatrace-Agents-Ansible
+[submodule "roles/Dynatrace-Collector"]
+	path = roles/Dynatrace-Collector
+	url = https://github.com/dynaTrace/Dynatrace-Collector-Ansible
+[submodule "roles/Dynatrace-Fixpack"]
+	path = roles/Dynatrace-Fixpack
+	url = https://github.com/dynaTrace/Dynatrace-Fixpack-Ansible
+[submodule "roles/Dynatrace-License"]
+	path = roles/Dynatrace-License
+	url = https://github.com/dynaTrace/Dynatrace-License-Ansible
+[submodule "roles/Dynatrace-Plugin"]
+	path = roles/Dynatrace-Plugin
+	url = https://github.com/dynaTrace/Dynatrace-Plugin-Ansible
+[submodule "roles/Dynatrace-Server"]
+	path = roles/Dynatrace-Server
+	url = https://github.com/dynaTrace/Dynatrace-Server-Ansible
+[submodule "roles/Dynatrace-WebServer-Agent"]
+	path = roles/Dynatrace-WebServer-Agent
+	url = https://github.com/dynaTrace/Dynatrace-WebServer-Agent-Ansible
