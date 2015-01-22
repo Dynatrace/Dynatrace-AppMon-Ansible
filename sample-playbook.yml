@@ -4,8 +4,10 @@
   - { role: Dynatrace-Agents, tags: agents }
   - { role: Dynatrace-Collector, tags: collector }
   - { role: Dynatrace-Fixpack, tags: fixpack }
+  - { role: Dynatrace-Java-Agent, tags: java-agent }
   - { role: Dynatrace-License, tags: license }
   - { role: Dynatrace-Plugin, tags: plugin }
   - { role: Dynatrace-Server, tags: server, dynatrace_server_linux_service_names: [dynaTraceServer, dynaTraceCollector, dynaTraceWebServerAgent] }
+  - { role: Dynatrace-Tomcat-Agent, tags: tomcat-agent }
   - { role: Dynatrace-WebServer-Agent, tags: wsagent }
   remote_user: deploy

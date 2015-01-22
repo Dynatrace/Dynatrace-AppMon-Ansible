@@ -16,15 +16,17 @@ ansible-playbook -i sample-inventory --tags=$product --ask-pass sample-playbook.
 
 Where *$product* is one of, or a comma-separated combination of the following [Ansible Tags](http://docs.ansible.com/playbooks_tags.html):
 
-| Tag       | Matches Role |
-|-----------|--------------|
-| agents    | [Dynatrace-Agents](https://galaxy.ansible.com/list#/roles/2620) |
-| collector | [Dynatrace-Collector](https://galaxy.ansible.com/list#/roles/2621) |
-| fixpack   | [Dynatrace-Fixpack](https://galaxy.ansible.com/list#/roles/2627) |
-| license   | [Dynatrace-License](https://galaxy.ansible.com/list#/roles/2626) |
-| plugin    | [Dynatrace-Plugin](https://galaxy.ansible.com/list#/roles/2628) |
-| server    | [Dynatrace-Server](https://galaxy.ansible.com/list#/roles/2623) |
-| wsagent   | [Dynatrace-WebServer-Agent](https://galaxy.ansible.com/list#/roles/2625) |
+| Tag          | Matches Role |
+|--------------|--------------|
+| agents       | [Dynatrace-Agents](https://galaxy.ansible.com/list#/roles/2620) |
+| collector    | [Dynatrace-Collector](https://galaxy.ansible.com/list#/roles/2621) |
+| fixpack      | [Dynatrace-Fixpack](https://galaxy.ansible.com/list#/roles/2627) |
+| java-agent   | [Dynatrace-Java-Agent](https://galaxy.ansible.com/list#/roles/2653) |
+| license      | [Dynatrace-License](https://galaxy.ansible.com/list#/roles/2626) |
+| plugin       | [Dynatrace-Plugin](https://galaxy.ansible.com/list#/roles/2628) |
+| server       | [Dynatrace-Server](https://galaxy.ansible.com/list#/roles/2623) |
+| tomcat-agent | [Dynatrace-Tomcat-Agent](https://galaxy.ansible.com/list#/roles/2654) |
+| wsagent      | [Dynatrace-WebServer-Agent](https://galaxy.ansible.com/list#/roles/2625) |
 
 ## Testing
 

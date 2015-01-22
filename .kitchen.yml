@@ -31,7 +31,9 @@ suites:
   - name: agents
   - name: collector
   - name: fixpack
+  - name: java-agent
   - name: license
   - name: plugin
   - name: server
+  - name: tomcat-agent
   - name: wsagent
