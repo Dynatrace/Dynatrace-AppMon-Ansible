@@ -26,3 +26,7 @@ describe service('dynaTraceCollector') do
       it { should be_enabled.with_level(5) }
   end
 end
+
+describe port(9998) do
+  it { should be_listening }
+end
