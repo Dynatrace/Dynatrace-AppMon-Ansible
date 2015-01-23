@@ -29,6 +29,7 @@ platforms:
 
 suites:
   - name: agents
+  - name: apache-agent
   - name: collector
   - name: fixpack
   - name: java-agent

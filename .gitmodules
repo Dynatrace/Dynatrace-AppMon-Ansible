@@ -46,3 +46,6 @@
 [submodule "roles/Dynatrace-Tomcat-Agent"]
 	path = roles/Dynatrace-Tomcat-Agent
 	url = https://github.com/dynaTrace/Dynatrace-Tomcat-Agent-Ansible
+[submodule "roles/Dynatrace-Apache-HTTPServer-Agent"]
+	path = roles/Dynatrace-Apache-HTTPServer-Agent
+	url = https://github.com/dynaTrace/Dynatrace-Apache-HTTPServer-Agent-Ansible.git

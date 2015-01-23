@@ -1,0 +1,20 @@
+---
+- hosts: all
+
+  pre_tasks:
+  - name: Install 'apache2'
+    apt: pkg=apache2 state=present
+    when: ansible_system == "Linux" and ansible_pkg_mgr == "apt"
+  - name: Install 'httpd'
+    yum: pkg=httpd state=present
+    when: ansible_system == "Linux" and ansible_pkg_mgr == "yum"
+
+  roles:
+  - role: Dynatrace-WebServer-Agent
+  - role: Dynatrace-Apache-HTTPServer-Agent
+    when: ansible_system == "Linux" and ansible_pkg_mgr == "apt"
+  - role: Dynatrace-Apache-HTTPServer-Agent
+    dynatrace_apache_agent_linux_apache_config_path: /etc/httpd/conf/httpd.conf
+    dynatrace_apache_agent_linux_apache_initd_script_path: /etc/init.d/httpd
+    when: ansible_system == "Linux" and ansible_pkg_mgr == "yum"
+  remote_user: vagrant
