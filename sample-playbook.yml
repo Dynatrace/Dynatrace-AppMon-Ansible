@@ -3,6 +3,7 @@
   roles:
   - { role: Dynatrace-Agents, tags: agents }
   - { role: Dynatrace-Apache-HTTPServer-Agent, tags: apache-agent }
+  - { role: Dynatrace-Client, tags: client }
   - { role: Dynatrace-Collector, tags: collector }
   - { role: Dynatrace-Fixpack, tags: fixpack }
   - { role: Dynatrace-Java-Agent, tags: java-agent }
