@@ -20,6 +20,7 @@ Where *$product* is one of, or a comma-separated combination of the following [A
 |--------------|--------------|
 | agents       | [Dynatrace-Agents](https://galaxy.ansible.com/list#/roles/2620) |
 | apache-agent | [Dynatrace-Apache-HTTPServer-Agent](https://galaxy.ansible.com/list#/roles/2681) |
+| client       | [Dynatrace-Client](https://galaxy.ansible.com/list#/roles/2856) |
 | collector    | [Dynatrace-Collector](https://galaxy.ansible.com/list#/roles/2621) |
 | fixpack      | [Dynatrace-Fixpack](https://galaxy.ansible.com/list#/roles/2627) |
 | java-agent   | [Dynatrace-Java-Agent](https://galaxy.ansible.com/list#/roles/2653) |
