@@ -18,17 +18,17 @@ Where *$product* is one of, or a comma-separated combination of the following [A
 
 | Tag          | Matches Role |
 |--------------|--------------|
-| agents       | [Dynatrace-Agents](https://galaxy.ansible.com/list#/roles/2620) |
-| apache-agent | [Dynatrace-Apache-HTTPServer-Agent](https://galaxy.ansible.com/list#/roles/2681) |
-| client       | [Dynatrace-Client](https://galaxy.ansible.com/list#/roles/2856) |
-| collector    | [Dynatrace-Collector](https://galaxy.ansible.com/list#/roles/2621) |
-| fixpack      | [Dynatrace-Fixpack](https://galaxy.ansible.com/list#/roles/2627) |
-| java-agent   | [Dynatrace-Java-Agent](https://galaxy.ansible.com/list#/roles/2653) |
-| license      | [Dynatrace-License](https://galaxy.ansible.com/list#/roles/2626) |
-| plugin       | [Dynatrace-Plugin](https://galaxy.ansible.com/list#/roles/2628) |
-| server       | [Dynatrace-Server](https://galaxy.ansible.com/list#/roles/2623) |
-| tomcat-agent | [Dynatrace-Tomcat-Agent](https://galaxy.ansible.com/list#/roles/2654) |
-| wsagent      | [Dynatrace-WebServer-Agent](https://galaxy.ansible.com/list#/roles/2625) |
+| agents       | [dynatrace.Dynatrace-Agents](https://galaxy.ansible.com/list#/roles/2620) |
+| apache-agent | [dynatrace.Dynatrace-Apache-HTTPServer-Agent](https://galaxy.ansible.com/list#/roles/2681) |
+| client       | [dynatrace.Dynatrace-Client](https://galaxy.ansible.com/list#/roles/2856) |
+| collector    | [dynatrace.Dynatrace-Collector](https://galaxy.ansible.com/list#/roles/2621) |
+| fixpack      | [dynatrace.Dynatrace-Fixpack](https://galaxy.ansible.com/list#/roles/2627) |
+| java-agent   | [dynatrace.Dynatrace-Java-Agent](https://galaxy.ansible.com/list#/roles/2653) |
+| license      | [dynatrace.Dynatrace-License](https://galaxy.ansible.com/list#/roles/2626) |
+| plugin       | [dynatrace.Dynatrace-Plugin](https://galaxy.ansible.com/list#/roles/2628) |
+| server       | [dynatrace.Dynatrace-Server](https://galaxy.ansible.com/list#/roles/2623) |
+| tomcat-agent | [dynatrace.Dynatrace-Tomcat-Agent](https://galaxy.ansible.com/list#/roles/2654) |
+| wsagent      | [dynatrace.Dynatrace-WebServer-Agent](https://galaxy.ansible.com/list#/roles/2625) |
 
 ## Testing
 

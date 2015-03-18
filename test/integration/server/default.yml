@@ -1,5 +1,6 @@
 ---
 - hosts: all
   roles:
-  - { role: Dynatrace-Server, dynatrace_server_linux_service_names: [dynaTraceServer, dynaTraceCollector, dynaTraceWebServerAgent] }
+  - role: dynatrace.Dynatrace-Server
+    dynatrace_server_linux_service_names: [dynaTraceServer, dynaTraceCollector, dynaTraceWebServerAgent]
   remote_user: vagrant

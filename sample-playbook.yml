@@ -1,15 +1,15 @@
 ---
 - hosts: all
   roles:
-  - { role: Dynatrace-Agents, tags: agents }
-  - { role: Dynatrace-Apache-HTTPServer-Agent, tags: apache-agent }
-  - { role: Dynatrace-Client, tags: client }
-  - { role: Dynatrace-Collector, tags: collector }
-  - { role: Dynatrace-Fixpack, tags: fixpack }
-  - { role: Dynatrace-Java-Agent, tags: java-agent }
-  - { role: Dynatrace-License, tags: license }
-  - { role: Dynatrace-Plugin, tags: plugin }
-  - { role: Dynatrace-Server, tags: server }
-  - { role: Dynatrace-Tomcat-Agent, tags: tomcat-agent }
-  - { role: Dynatrace-WebServer-Agent, tags: wsagent }
+  - { role: dynatrace.Dynatrace-Agents, tags: agents }
+  - { role: dynatrace.Dynatrace-Apache-HTTPServer-Agent, tags: apache-agent }
+  - { role: dynatrace.Dynatrace-Client, tags: client }
+  - { role: dynatrace.Dynatrace-Collector, tags: collector }
+  - { role: dynatrace.Dynatrace-Fixpack, tags: fixpack }
+  - { role: dynatrace.Dynatrace-Java-Agent, tags: java-agent }
+  - { role: dynatrace.Dynatrace-License, tags: license }
+  - { role: dynatrace.Dynatrace-Plugin, tags: plugin }
+  - { role: dynatrace.Dynatrace-Server, tags: server }
+  - { role: dynatrace.Dynatrace-Tomcat-Agent, tags: tomcat-agent }
+  - { role: dynatrace.Dynatrace-WebServer-Agent, tags: wsagent }
   remote_user: deploy

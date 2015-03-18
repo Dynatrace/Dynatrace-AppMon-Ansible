@@ -1,7 +1,6 @@
 ---
 - hosts: all
   roles:
-  - role: Dynatrace-Agents
-  - role: Dynatrace-Tomcat-Agent
+  - role: dynatrace.Dynatrace-Tomcat-Agent
     dynatrace_tomcat_agent_env_var_file_name: /tmp/environment
   remote_user: vagrant

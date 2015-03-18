@@ -1,7 +1,6 @@
 ---
 - hosts: all
   roles:
-  - role: Dynatrace-Agents
-  - role: Dynatrace-Java-Agent
+  - role: dynatrace.Dynatrace-Java-Agent
     dynatrace_java_agent_env_var_file_name: /tmp/environment
   remote_user: vagrant

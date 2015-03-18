@@ -10,10 +10,9 @@
     when: ansible_system == "Linux" and ansible_pkg_mgr == "yum"
 
   roles:
-  - role: Dynatrace-WebServer-Agent
-  - role: Dynatrace-Apache-HTTPServer-Agent
+  - role: dynatrace.Dynatrace-Apache-HTTPServer-Agent
     when: ansible_system == "Linux" and ansible_pkg_mgr == "apt"
-  - role: Dynatrace-Apache-HTTPServer-Agent
+  - role: dynatrace.Dynatrace-Apache-HTTPServer-Agent
     dynatrace_apache_agent_linux_apache_config_path: /etc/httpd/conf/httpd.conf
     dynatrace_apache_agent_linux_apache_initd_script_path: /etc/init.d/httpd
     when: ansible_system == "Linux" and ansible_pkg_mgr == "yum"

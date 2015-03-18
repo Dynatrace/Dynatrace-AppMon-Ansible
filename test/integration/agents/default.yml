@@ -1,5 +1,5 @@
 ---
 - hosts: all
   roles:
-  - { role: Dynatrace-Agents }
+  - role: dynatrace.Dynatrace-Agents
   remote_user: vagrant
