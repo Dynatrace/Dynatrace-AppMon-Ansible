@@ -1,6 +1,23 @@
 ---
 - hosts: all
   roles:
+  - role: ANXS.postgresql
+    postgresql_databases:
+    - name: dynatrace-db
+    postgresql_users:
+    - name: dynatrace
+      pass: dynatrace
+      encrypted: no
+    postgresql_user_privileges:
+    - name: dynatrace
+      db: dynatrace-db
+  remote_user: vagrant
+  sudo: yes
+
+- hosts: all
+  roles:
   - role: dynatrace.Dynatrace-Server
     dynatrace_server_linux_service_names: [dynaTraceServer, dynaTraceCollector, dynaTraceWebServerAgent]
+    dynatrace_server_do_pwh_connection: yes
+    dynatrace_server_pwh_connection_database: dynatrace-pwh
   remote_user: vagrant
