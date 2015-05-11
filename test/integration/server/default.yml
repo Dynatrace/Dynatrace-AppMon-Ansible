@@ -3,14 +3,14 @@
   roles:
   - role: ANXS.postgresql
     postgresql_databases:
-    - name: dynatrace-db
+    - name: dynatrace-pwh
     postgresql_users:
     - name: dynatrace
       pass: dynatrace
       encrypted: no
     postgresql_user_privileges:
     - name: dynatrace
-      db: dynatrace-db
+      db: dynatrace-pwh
   remote_user: vagrant
   sudo: yes
 
