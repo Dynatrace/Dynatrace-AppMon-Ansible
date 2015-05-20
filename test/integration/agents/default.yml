@@ -1,5 +1,0 @@
----
-- hosts: all
-  roles:
-  - role: dynatrace.Dynatrace-Agents
-  remote_user: vagrant

@@ -1,9 +1,0 @@
----
-- hosts: all
-  roles:
-  - role: dynatrace.Dynatrace-Server
-    dynatrace_server_linux_service_names: [dynaTraceServer]
-    dynatrace_server_fixpack_file_name: no
-    dynatrace_server_license_file_name: no
-  - role: dynatrace.Dynatrace-License
-  remote_user: vagrant
