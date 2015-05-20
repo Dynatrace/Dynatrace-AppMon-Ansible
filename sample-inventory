@@ -1,1 +1,8 @@
-192.168.0.10
+[dynatrace-server]
+dynatrace.example.com
+
+[dynatrace-collectors]
+www.example.com
+
+[dynatrace-clients]
+workstation[0:99]

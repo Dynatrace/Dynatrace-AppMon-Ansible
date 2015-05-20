@@ -1,15 +1,22 @@
 ---
-- hosts: all
+- hosts: dynatrace-server
   roles:
-  - { role: dynatrace.Dynatrace-Agents, tags: agents }
-  - { role: dynatrace.Dynatrace-Apache-HTTPServer-Agent, tags: apache-agent }
-  - { role: dynatrace.Dynatrace-Client, tags: client }
-  - { role: dynatrace.Dynatrace-Collector, tags: collector }
-  - { role: dynatrace.Dynatrace-Fixpack, tags: fixpack }
-  - { role: dynatrace.Dynatrace-Java-Agent, tags: java-agent }
-  - { role: dynatrace.Dynatrace-License, tags: license }
-  - { role: dynatrace.Dynatrace-Plugin, tags: plugin }
-  - { role: dynatrace.Dynatrace-Server, tags: server }
-  - { role: dynatrace.Dynatrace-Tomcat-Agent, tags: tomcat-agent }
-  - { role: dynatrace.Dynatrace-WebServer-Agent, tags: wsagent }
+  - role: dynatrace.Dynatrace-Server
+    dynatrace_server_do_pwh_connection: yes
+    dynatrace_server_pwh_connection_hostname: dynatrace-pwh
+    dynatrace_server_pwh_connection_port: 5432
+    dynatrace_server_pwh_connection_dbms: postgresql
+    dynatrace_server_pwh_connection_database: dynatrace-pwh
+    dynatrace_server_pwh_connection_username: dynatrace
+    dynatrace_server_pwh_connection_password: dynatrace
+  remote_user: deploy
+
+- hosts: dynatrace-collectors
+  roles:
+  - role: dynatrace.Dynatrace-Collector
+  remote_user: deploy
+
+- hosts: dynatrace-clients
+  roles:
+  - role: dynatrace.Dynatrace-Client
   remote_user: deploy
