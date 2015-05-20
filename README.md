@@ -30,29 +30,14 @@ Where *$product* is one of, or a comma-separated combination of the following [A
 | tomcat-agent | [dynatrace.Dynatrace-Tomcat-Agent](https://galaxy.ansible.com/list#/roles/2654) |
 | wsagent      | [dynatrace.Dynatrace-WebServer-Agent](https://galaxy.ansible.com/list#/roles/2625) |
 
-## Testing
-
-We use [Kitchen](http://kitchen.ci) to automatically test our automated deployments using [serverspec](http://serverspec.org):
-
-1) Install Kitchen and its dependencies from within the project's directory:
-
-```
-gem install bundler
-bundle install
-```
-
-2) Run tests
-
-```
-kitchen list # choose an instance (e.g. server-ubuntu-1204)
-kitchen test $instance
-```
-
 ## Additional Resources
 
+- [Blog: How to Automate Enterprise Application Monitoring with Ansible](http://apmblog.dynatrace.com/2015/03/04/how-to-automate-enterprise-application-monitoring-with-ansible/)
+- [Blog: How to Automate Enterprise Application Monitoring with Ansible - Part II](http://apmblog.dynatrace.com/2015/04/23/how-to-automate-enterprise-application-monitoring-with-ansible-part-ii/)
 - [Slide Deck: Automated Deployments](http://slideshare.net/MartinEtmajer/automated-deployments-slide-share)
-- [Slide Deck: Dynatrace Inside Continuous Delivery](http://slideshare.net/MartinEtmajer/dynatrace-inside-continuous-delivery)
-- [Tutorials: Automated Deployments with Dynatrace and Ansible](https://community.compuwareapm.com/community/display/COE/Tutorials+on+Automated+Deployments#TutorialsonAutomatedDeployments-ansible)
+- [Slide Deck: Automated Deployments (of Dynatrace) with Ansible](http://www.slideshare.net/MartinEtmajer/automated-deployments-with-ansible)
+- [Slide Deck: Testing Ansible Roles with Test Kitchen, Serverspec and RSpec](http://www.slideshare.net/MartinEtmajer/testing-ansible-roles-with-test-kitchen-serverspec-and-rspec-48185017)
+- [Tutorials: Automated Deployments (of Dynatrace) with Ansible](https://community.compuwareapm.com/community/display/COE/Tutorials+on+Automated+Deployments#TutorialsonAutomatedDeployments-ansible)
 
 ## Questions?
 
