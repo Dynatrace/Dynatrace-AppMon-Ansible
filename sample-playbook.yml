@@ -6,6 +6,7 @@
   - { role: dynatrace.Dynatrace-Client, tags: client }
   - { role: dynatrace.Dynatrace-Collector, tags: collector }
   - { role: dynatrace.Dynatrace-Fixpack, tags: fixpack }
+  - { role: dynatrace.Dynatrace-Glassfish-Agent, tags: glassfish-agent }
   - { role: dynatrace.Dynatrace-Java-Agent, tags: java-agent }
   - { role: dynatrace.Dynatrace-License, tags: license }
   - { role: dynatrace.Dynatrace-Plugin, tags: plugin }

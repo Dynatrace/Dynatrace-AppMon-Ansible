@@ -31,3 +31,6 @@
 [submodule "roles/Dynatrace-Client"]
 	path = roles/dynatrace.Dynatrace-Client
 	url = https://github.com/dynaTrace/Dynatrace-Client-Ansible.git
+[submodule "roles/dynatrace.Dynatrace-Glassfish-Agent"]
+	path = roles/dynatrace.Dynatrace-Glassfish-Agent
+	url = https://github.com/dynaTrace/Dynatrace-Glassfish-Agent-Ansible.git
