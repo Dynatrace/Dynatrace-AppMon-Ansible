@@ -4,9 +4,9 @@
 [submodule "roles/Dynatrace-Collector"]
 	path = roles/dynatrace.Dynatrace-Collector
 	url = https://github.com/dynaTrace/Dynatrace-Collector-Ansible
-[submodule "roles/Dynatrace-Fixpack"]
+[submodule "roles/Dynatrace-Update"]
 	path = roles/dynatrace.Dynatrace-Update
-	url = https://github.com/dynaTrace/Dynatrace-Fixpack-Ansible
+	url = https://github.com/dynaTrace/Dynatrace-Update-Ansible
 [submodule "roles/Dynatrace-License"]
 	path = roles/dynatrace.Dynatrace-License
 	url = https://github.com/dynaTrace/Dynatrace-License-Ansible
