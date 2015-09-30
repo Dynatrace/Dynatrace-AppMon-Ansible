@@ -9,6 +9,7 @@
   - { role: dynatrace.Dynatrace-Glassfish-Agent, tags: glassfish-agent }
   - { role: dynatrace.Dynatrace-Java-Agent, tags: java-agent }
   - { role: dynatrace.Dynatrace-License, tags: license }
+  - { role: dynatrace.Dynatrace-NGINX-Agent, tags: nginx-agent }
   - { role: dynatrace.Dynatrace-Plugin, tags: plugin }
   - { role: dynatrace.Dynatrace-Server, tags: server }
   - { role: dynatrace.Dynatrace-Tomcat-Agent, tags: tomcat-agent }

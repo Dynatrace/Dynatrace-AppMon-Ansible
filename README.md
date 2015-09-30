@@ -26,6 +26,7 @@ Where *$product* is one of, or a comma-separated combination of the following [A
 | glassfish-agent | [dynatrace.Dynatrace-Glassfish-Agent](https://galaxy.ansible.com/list#/roles/4942) |
 | java-agent      | [dynatrace.Dynatrace-Java-Agent](https://galaxy.ansible.com/list#/roles/2653) |
 | license         | [dynatrace.Dynatrace-License](https://galaxy.ansible.com/list#/roles/2626) |
+| nginx-agent     | [dynatrace.Dynatrace-NGINX-Agent](https://galaxy.ansible.com/list#/roles/5319) |
 | plugin          | [dynatrace.Dynatrace-Plugin](https://galaxy.ansible.com/list#/roles/2628) |
 | server          | [dynatrace.Dynatrace-Server](https://galaxy.ansible.com/list#/roles/2623) |
 | tomcat-agent    | [dynatrace.Dynatrace-Tomcat-Agent](https://galaxy.ansible.com/list#/roles/2654) |
