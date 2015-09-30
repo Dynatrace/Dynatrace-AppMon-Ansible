@@ -2,7 +2,7 @@
 - hosts: all
   roles:
   - { role: dynatrace.Dynatrace-Agents, tags: agents }
-  - { role: dynatrace.Dynatrace-Apache-HTTPServer-Agent, tags: apache-agent }
+  - { role: dynatrace.Dynatrace-Apache-HTTPD-Agent, tags: apache-httpd-agent }
   - { role: dynatrace.Dynatrace-Client, tags: client }
   - { role: dynatrace.Dynatrace-Collector, tags: collector }
   - { role: dynatrace.Dynatrace-Fixpack, tags: fixpack }
