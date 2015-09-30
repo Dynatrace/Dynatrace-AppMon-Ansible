@@ -1,0 +1,3 @@
+---
+- include: install-apache-agent-linux.yml
+  when: ansible_system == "Linux"

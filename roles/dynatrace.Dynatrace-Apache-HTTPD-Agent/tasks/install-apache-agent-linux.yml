@@ -1,0 +1,10 @@
+- name: Inject the Dynatrace Apache Agent into Apache's config file {{ dynatrace_apache_agent_linux_apache_config_path }}
+  lineinfile: >
+    dest={{ dynatrace_apache_agent_linux_apache_config_path }}
+    regexp='LoadModule dtagent_module "{{ dynatrace_apache_agent_linux_agent_path }}"'
+    line='LoadModule dtagent_module "{{ dynatrace_apache_agent_linux_agent_path }}"'
+    insertafter=EOF
+    state={{ dynatrace_apache_agent_state }}
+    create=yes
+    backup=yes
+  sudo: yes

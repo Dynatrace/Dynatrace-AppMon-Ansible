@@ -1,0 +1,6 @@
+---
+dynatrace_apache_agent_linux_agent_path: /opt/dynatrace/agent/lib64/libdtagent.so
+dynatrace_apache_agent_linux_apache_config_path: /etc/apache2/apache2.conf
+
+dynatrace_apache_agent_name: apache-dtwsagent
+dynatrace_apache_agent_state: present
