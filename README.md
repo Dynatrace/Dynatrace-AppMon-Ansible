@@ -22,7 +22,7 @@ Where *$product* is one of, or a comma-separated combination of the following [A
 | apache-httpd-agent | [dynatrace.Dynatrace-Apache-HTTPD-Agent](https://galaxy.ansible.com/list#/roles/2681) |
 | client             | [dynatrace.Dynatrace-Client](https://galaxy.ansible.com/list#/roles/2856) |
 | collector          | [dynatrace.Dynatrace-Collector](https://galaxy.ansible.com/list#/roles/2621) |
-| fixpack            | [dynatrace.Dynatrace-Fixpack](https://galaxy.ansible.com/list#/roles/2627) |
+| update             | [dynatrace.Dynatrace-Update](https://galaxy.ansible.com/list#/roles/2627) |
 | glassfish-agent    | [dynatrace.Dynatrace-Glassfish-Agent](https://galaxy.ansible.com/list#/roles/4942) |
 | java-agent         | [dynatrace.Dynatrace-Java-Agent](https://galaxy.ansible.com/list#/roles/2653) |
 | license            | [dynatrace.Dynatrace-License](https://galaxy.ansible.com/list#/roles/2626) |
