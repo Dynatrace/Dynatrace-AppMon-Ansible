@@ -8,14 +8,14 @@ This Ansible role installs and configures the Dynatrace WebServer Agent of the [
 
 The role is available via:
 
-- [Ansible Galaxy](https://galaxy.ansible.com/list#/roles/2681)
+- [Ansible Galaxy](https://galaxy.ansible.com/list#/roles/5321)
 - [GitHub](https://github.com/Dynatrace/Dynatrace-Apache-HTTPD-Agent-Ansible)
 
 ## Dependencies
 
 This roles depends on the following roles:
 
-- [Dynatrace-WebServer-Agent](https://galaxy.ansible.com/list#/roles/2625)
+- [Dynatrace-WebServer-Agent](https://galaxy.ansible.com/list#/roles/5324)
 
 ## Description
 
