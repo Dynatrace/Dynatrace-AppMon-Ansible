@@ -1,17 +1,17 @@
 ---
 - hosts: all
   roles:
-  - { role: dynatrace.Dynatrace-Agents, tags: agents }
-  - { role: dynatrace.Dynatrace-Apache-HTTPD-Agent, tags: apache-httpd-agent }
-  - { role: dynatrace.Dynatrace-Client, tags: client }
-  - { role: dynatrace.Dynatrace-Collector, tags: collector }
-  - { role: dynatrace.Dynatrace-Fixpack, tags: fixpack }
-  - { role: dynatrace.Dynatrace-Glassfish-Agent, tags: glassfish-agent }
-  - { role: dynatrace.Dynatrace-Java-Agent, tags: java-agent }
-  - { role: dynatrace.Dynatrace-License, tags: license }
-  - { role: dynatrace.Dynatrace-NGINX-Agent, tags: nginx-agent }
-  - { role: dynatrace.Dynatrace-Plugin, tags: plugin }
-  - { role: dynatrace.Dynatrace-Server, tags: server }
-  - { role: dynatrace.Dynatrace-Tomcat-Agent, tags: tomcat-agent }
-  - { role: dynatrace.Dynatrace-WebServer-Agent, tags: wsagent }
+  - { role: Dynatrace.Dynatrace-Agents, tags: agents }
+  - { role: Dynatrace.Dynatrace-Apache-HTTPD-Agent, tags: apache-httpd-agent }
+  - { role: Dynatrace.Dynatrace-Client, tags: client }
+  - { role: Dynatrace.Dynatrace-Collector, tags: collector }
+  - { role: Dynatrace.Dynatrace-Fixpack, tags: fixpack }
+  - { role: Dynatrace.Dynatrace-Glassfish-Agent, tags: glassfish-agent }
+  - { role: Dynatrace.Dynatrace-Java-Agent, tags: java-agent }
+  - { role: Dynatrace.Dynatrace-License, tags: license }
+  - { role: Dynatrace.Dynatrace-NGINX-Agent, tags: nginx-agent }
+  - { role: Dynatrace.Dynatrace-Plugin, tags: plugin }
+  - { role: Dynatrace.Dynatrace-Server, tags: server }
+  - { role: Dynatrace.Dynatrace-Tomcat-Agent, tags: tomcat-agent }
+  - { role: Dynatrace.Dynatrace-WebServer-Agent, tags: wsagent }
   remote_user: deploy
