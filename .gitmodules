@@ -1,9 +1,3 @@
-[submodule "roles/Dynatrace-Agents"]
-	path = roles/dynatrace.Dynatrace-Agents
-	url = https://github.com/dynaTrace/Dynatrace-Agents-Ansible
-[submodule "roles/Dynatrace-Collector"]
-	path = roles/dynatrace.Dynatrace-Collector
-	url = https://github.com/dynaTrace/Dynatrace-Collector-Ansible
 [submodule "roles/Dynatrace-Update"]
 	path = roles/dynatrace.Dynatrace-Update
 	url = https://github.com/dynaTrace/Dynatrace-Update-Ansible
@@ -28,12 +22,18 @@
 [submodule "roles/Dynatrace-Apache-HTTPD-Agent"]
 	path = roles/dynatrace.Dynatrace-Apache-HTTPD-Agent/
 	url = https://github.com/dynaTrace/Dynatrace-Apache-HTTPD-Agent-Ansible.git
-[submodule "roles/Dynatrace-Client"]
-	path = roles/dynatrace.Dynatrace-Client
-	url = https://github.com/dynaTrace/Dynatrace-Client-Ansible.git
-[submodule "roles/dynatrace.Dynatrace-Glassfish-Agent"]
-	path = roles/dynatrace.Dynatrace-Glassfish-Agent
-	url = https://github.com/dynaTrace/Dynatrace-Glassfish-Agent-Ansible.git
 [submodule "roles/dynatrace.Dynatrace-NGINX-Agent"]
 	path = roles/dynatrace.Dynatrace-NGINX-Agent
 	url = https://github.com/dynaTrace/Dynatrace-NGINX-Agent-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Agent"]
+	path = roles/Dynatrace.Dynatrace-Agent
+	url = https://github.com/Dynatrace/Dynatrace-Agent-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Apache-HTTPD-Agent"]
+	path = roles/Dynatrace.Dynatrace-Apache-HTTPD-Agent
+	url = https://github.com/Dynatrace/Dynatrace-Apache-HTTPD-Agent-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Client"]
+	path = roles/Dynatrace.Dynatrace-Client
+	url = https://github.com/Dynatrace/Dynatrace-Client-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Collector"]
+	path = roles/Dynatrace.Dynatrace-Collector
+	url = https://github.com/Dynatrace/Dynatrace-Collector-Ansible.git
