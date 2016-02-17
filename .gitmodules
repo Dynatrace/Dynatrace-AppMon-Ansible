@@ -1,6 +1,3 @@
-[submodule "roles/Dynatrace-Apache-HTTPD-Agent"]
-	path = roles/dynatrace.Dynatrace-Apache-HTTPD-Agent/
-	url = https://github.com/dynaTrace/Dynatrace-Apache-HTTPD-Agent-Ansible.git
 [submodule "roles/Dynatrace.Dynatrace-Agent"]
 	path = roles/Dynatrace.Dynatrace-Agent
 	url = https://github.com/Dynatrace/Dynatrace-Agent-Ansible.git
