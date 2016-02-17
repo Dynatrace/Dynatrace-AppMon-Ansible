@@ -1,30 +1,6 @@
-[submodule "roles/Dynatrace-Update"]
-	path = roles/dynatrace.Dynatrace-Update
-	url = https://github.com/dynaTrace/Dynatrace-Update-Ansible
-[submodule "roles/Dynatrace-License"]
-	path = roles/dynatrace.Dynatrace-License
-	url = https://github.com/dynaTrace/Dynatrace-License-Ansible
-[submodule "roles/Dynatrace-Plugin"]
-	path = roles/dynatrace.Dynatrace-Plugin
-	url = https://github.com/dynaTrace/Dynatrace-Plugin-Ansible
-[submodule "roles/Dynatrace-Server"]
-	path = roles/dynatrace.Dynatrace-Server
-	url = https://github.com/dynaTrace/Dynatrace-Server-Ansible
-[submodule "roles/Dynatrace-WebServer-Agent"]
-	path = roles/dynatrace.Dynatrace-WebServer-Agent
-	url = https://github.com/dynaTrace/Dynatrace-WebServer-Agent-Ansible
-[submodule "roles/Dynatrace-Java-Agent"]
-	path = roles/dynatrace.Dynatrace-Java-Agent
-	url = https://github.com/dynaTrace/Dynatrace-Java-Agent-Ansible
-[submodule "roles/Dynatrace-Tomcat-Agent"]
-	path = roles/dynatrace.Dynatrace-Tomcat-Agent
-	url = https://github.com/dynaTrace/Dynatrace-Tomcat-Agent-Ansible
 [submodule "roles/Dynatrace-Apache-HTTPD-Agent"]
 	path = roles/dynatrace.Dynatrace-Apache-HTTPD-Agent/
 	url = https://github.com/dynaTrace/Dynatrace-Apache-HTTPD-Agent-Ansible.git
-[submodule "roles/dynatrace.Dynatrace-NGINX-Agent"]
-	path = roles/dynatrace.Dynatrace-NGINX-Agent
-	url = https://github.com/dynaTrace/Dynatrace-NGINX-Agent-Ansible.git
 [submodule "roles/Dynatrace.Dynatrace-Agent"]
 	path = roles/Dynatrace.Dynatrace-Agent
 	url = https://github.com/Dynatrace/Dynatrace-Agent-Ansible.git
@@ -37,3 +13,30 @@
 [submodule "roles/Dynatrace.Dynatrace-Collector"]
 	path = roles/Dynatrace.Dynatrace-Collector
 	url = https://github.com/Dynatrace/Dynatrace-Collector-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Glassfish-Agent"]
+	path = roles/Dynatrace.Dynatrace-Glassfish-Agent
+	url = https://github.com/Dynatrace/Dynatrace-Glassfish-Agent-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Java-Agent"]
+	path = roles/Dynatrace.Dynatrace-Java-Agent
+	url = https://github.com/Dynatrace/Dynatrace-Java-Agent-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-License"]
+	path = roles/Dynatrace.Dynatrace-License
+	url = https://github.com/Dynatrace/Dynatrace-License-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-NGINX-Agent"]
+	path = roles/Dynatrace.Dynatrace-NGINX-Agent
+	url = https://github.com/Dynatrace/Dynatrace-NGINX-Agent-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Plugin"]
+	path = roles/Dynatrace.Dynatrace-Plugin
+	url = https://github.com/Dynatrace/Dynatrace-Plugin-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Server"]
+	path = roles/Dynatrace.Dynatrace-Server
+	url = https://github.com/Dynatrace/Dynatrace-Server-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Tomcat-Agent"]
+	path = roles/Dynatrace.Dynatrace-Tomcat-Agent
+	url = https://github.com/Dynatrace/Dynatrace-Tomcat-Agent-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Update"]
+	path = roles/Dynatrace.Dynatrace-Update
+	url = https://github.com/Dynatrace/Dynatrace-Update-Ansible.git
+[submodule "roles/Dynatrace.Dynatrace-WebServer-Agent"]
+	path = roles/Dynatrace.Dynatrace-WebServer-Agent
+	url = https://github.com/Dynatrace/Dynatrace-WebServer-Agent-Ansible.git
