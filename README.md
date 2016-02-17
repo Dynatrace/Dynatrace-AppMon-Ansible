@@ -18,19 +18,19 @@ Where *$product* is one of, or a comma-separated combination of the following [A
 
 | Tag                | Matches Role |
 |--------------------|--------------|
-| agents             | [Dynatrace.Dynatrace-Agents](https://galaxy.ansible.com/list#/roles/5320) |
-| apache-httpd-agent | [Dynatrace.Dynatrace-Apache-HTTPD-Agent](https://galaxy.ansible.com/list#/roles/5321) |
-| client             | [Dynatrace.Dynatrace-Client](https://galaxy.ansible.com/list#/roles/5323) |
-| collector          | [Dynatrace.Dynatrace-Collector](https://galaxy.ansible.com/list#/roles/5325) |
-| glassfish-agent    | [Dynatrace.Dynatrace-Glassfish-Agent](https://galaxy.ansible.com/list#/roles/5326) |
-| java-agent         | [Dynatrace.Dynatrace-Java-Agent](https://galaxy.ansible.com/list#/roles/5327) |
-| license            | [Dynatrace.Dynatrace-License](https://galaxy.ansible.com/list#/roles/5328) |
-| nginx-agent        | [Dynatrace.Dynatrace-NGINX-Agent](https://galaxy.ansible.com/list#/roles/5319) |
-| plugin             | [Dynatrace.Dynatrace-Plugin](https://galaxy.ansible.com/list#/roles/5330) |
-| server             | [Dynatrace.Dynatrace-Server](https://galaxy.ansible.com/list#/roles/5331) |
-| tomcat-agent       | [Dynatrace.Dynatrace-Tomcat-Agent](https://galaxy.ansible.com/list#/roles/5332) |
-| update             | [Dynatrace.Dynatrace-Update](https://galaxy.ansible.com/list#/roles/5333) |
-| wsagent            | [Dynatrace.Dynatrace-WebServer-Agent](https://galaxy.ansible.com/list#/roles/5324) |
+| agents             | [Dynatrace.Dynatrace-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-Agent) |
+| apache-httpd-agent | [Dynatrace.Dynatrace-Apache-HTTPD-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-Apache-HTTPD-Agent) |
+| client             | [Dynatrace.Dynatrace-Client](https://galaxy.ansible.com/Dynatrace/Dynatrace-Client) |
+| collector          | [Dynatrace.Dynatrace-Collector](https://galaxy.ansible.com/Dynatrace/Dynatrace-Collector) |
+| glassfish-agent    | [Dynatrace.Dynatrace-Glassfish-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-Glassfish-Agent) |
+| java-agent         | [Dynatrace.Dynatrace-Java-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-Java-Agent) |
+| license            | [Dynatrace.Dynatrace-License](https://galaxy.ansible.com/Dynatrace/Dynatrace-License) |
+| nginx-agent        | [Dynatrace.Dynatrace-NGINX-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-NGINX-Agent) |
+| plugin             | [Dynatrace.Dynatrace-Plugin](https://galaxy.ansible.com/Dynatrace/Dynatrace-Plugin) |
+| server             | [Dynatrace.Dynatrace-Server](https://galaxy.ansible.com/Dynatrace/Dynatrace-Server) |
+| tomcat-agent       | [Dynatrace.Dynatrace-Tomcat-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-Tomcat-Agent) |
+| update             | [Dynatrace.Dynatrace-Update](https://galaxy.ansible.com/Dynatrace/Dynatrace-Update) |
+| wsagent            | [Dynatrace.Dynatrace-WebServer-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-WebServer-Agent) |
 
 ## Additional Resources
 
