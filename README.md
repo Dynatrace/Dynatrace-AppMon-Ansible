@@ -18,7 +18,7 @@ Where *$product* is one of, or a comma-separated combination of the following [A
 
 | Tag                | Matches Role |
 |--------------------|--------------|
-| agents             | [Dynatrace.Dynatrace-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-Agent) |
+| agent              | [Dynatrace.Dynatrace-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-Agent) |
 | apache-httpd-agent | [Dynatrace.Dynatrace-Apache-HTTPD-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-Apache-HTTPD-Agent) |
 | client             | [Dynatrace.Dynatrace-Client](https://galaxy.ansible.com/Dynatrace/Dynatrace-Client) |
 | collector          | [Dynatrace.Dynatrace-Collector](https://galaxy.ansible.com/Dynatrace/Dynatrace-Collector) |
