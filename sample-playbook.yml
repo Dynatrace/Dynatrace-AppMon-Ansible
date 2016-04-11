@@ -14,4 +14,3 @@
   - { role: Dynatrace.Dynatrace-Tomcat-Agent, tags: tomcat-agent }
   - { role: Dynatrace.Dynatrace-Update, tags: update }
   - { role: Dynatrace.Dynatrace-WebServer-Agent, tags: wsagent }
-  remote_user: deploy
