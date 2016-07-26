@@ -14,4 +14,4 @@
   - { role: Dynatrace.Dynatrace-Tomcat-Agent, tags: tomcat-agent }
   - { role: Dynatrace.Dynatrace-Update, tags: update }
   - { role: Dynatrace.Dynatrace-WebServer-Agent, tags: wsagent }
-  - { role: Dynatrace.Ruxit-Agent, tags: ruxit-agent }
+  - { role: Dynatrace.OneAgent, tags: oneagent }

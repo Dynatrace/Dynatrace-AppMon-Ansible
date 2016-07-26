@@ -37,6 +37,6 @@
 [submodule "roles/Dynatrace.Dynatrace-WebServer-Agent"]
 	path = roles/Dynatrace.Dynatrace-WebServer-Agent
 	url = https://github.com/Dynatrace/Dynatrace-WebServer-Agent-Ansible.git
-[submodule "roles/Dynatrace.Ruxit-Agent"]
-	path = roles/Dynatrace.Ruxit-Agent
-	url = https://github.com/Dynatrace/Ruxit-Agent-Ansible.git
+[submodule "roles/Dynatrace.OneAgent"]
+	path = roles/Dynatrace.OneAgent
+	url = https://github.com/Dynatrace/Dynatrace-OneAgent-Ansible.git
