@@ -1,0 +1,17 @@
+---
+- hosts: all
+  roles:
+  - { role: Dynatrace.Dynatrace-Agent, tags: agent }
+  - { role: Dynatrace.Dynatrace-Apache-HTTPD-Agent, tags: apache-httpd-agent }
+  - { role: Dynatrace.Dynatrace-Client, tags: client }
+  - { role: Dynatrace.Dynatrace-Collector, tags: collector }
+  - { role: Dynatrace.Dynatrace-Glassfish-Agent, tags: glassfish-agent }
+  - { role: Dynatrace.Dynatrace-Java-Agent, tags: java-agent }
+  - { role: Dynatrace.Dynatrace-License, tags: license }
+  - { role: Dynatrace.Dynatrace-NGINX-Agent, tags: nginx-agent }
+  - { role: Dynatrace.Dynatrace-Plugin, tags: plugin }
+  - { role: Dynatrace.Dynatrace-Server, tags: server }
+  - { role: Dynatrace.Dynatrace-Tomcat-Agent, tags: tomcat-agent }
+  - { role: Dynatrace.Dynatrace-Update, tags: update }
+  - { role: Dynatrace.Dynatrace-WebServer-Agent, tags: wsagent }
+  - { role: Dynatrace.OneAgent, tags: oneagent }
