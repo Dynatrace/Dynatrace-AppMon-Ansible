@@ -1,0 +1,42 @@
+[submodule "roles/dynatrace-agent-ansible"]
+	path = roles/dynatrace-agent-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-agent-ansible.git
+[submodule "roles/dynatrace-apache-httpd-agent-ansible"]
+	path = roles/dynatrace-apache-httpd-agent-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-apache-httpd-agent-ansible.git
+[submodule "roles/dynatrace-client-ansible"]
+	path = roles/dynatrace-client-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-client-ansible.git
+[submodule "roles/dynatrace-collector-ansible"]
+	path = roles/dynatrace-collector-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-collector-ansible.git
+[submodule "roles/dynatrace-glassfish-agent-ansible"]
+	path = roles/dynatrace-glassfish-agent-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-glassfish-agent-ansible.git
+[submodule "roles/dynatrace-java-agent-ansible"]
+	path = roles/dynatrace-java-agent-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-java-agent-ansible.git
+[submodule "roles/dynatrace-license-ansible"]
+	path = roles/dynatrace-license-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-license-ansible.git
+[submodule "roles/dynatrace-nginx-agent-ansible"]
+	path = roles/dynatrace-nginx-agent-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-nginx-agent-ansible.git
+[submodule "roles/dynatrace-oneagent-ansible"]
+	path = roles/dynatrace-oneagent-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-oneagent-ansible.git
+[submodule "roles/dynatrace-plugin-ansible"]
+	path = roles/dynatrace-plugin-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-plugin-ansible.git
+[submodule "roles/dynatrace-server-ansible"]
+	path = roles/dynatrace-server-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-server-ansible.git
+[submodule "roles/dynatrace-tomcat-agent-ansible"]
+	path = roles/dynatrace-tomcat-agent-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-tomcat-agent-ansible.git
+[submodule "roles/dynatrace-update-ansible"]
+	path = roles/dynatrace-update-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-update-ansible.git
+[submodule "roles/dynatrace-webserver-agent-ansible"]
+	path = roles/dynatrace-webserver-agent-ansible
+	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-webserver-agent-ansible.git
