@@ -1,0 +1,45 @@
+---
+- name: Stop and disable running Dynatrace services
+  service:
+    name: dynaTraceServer
+    state: stopped
+    enabled: no
+  ignore_errors: yes
+  become: yes
+
+- name: "Wait for the Dynatrace Server to become unavailable via port {{ item }}"
+  wait_for:
+    port: "{{ item }}"
+    state: stopped
+  with_items: [ "{{ dynatrace_server_collector_port }}", 2021, 6699, 8021, 9911]
+  become: yes
+  
+- name: "Remove all link from rc*.d"
+  shell: sudo find -L /etc/ -xtype l -name "*dynaTraceServer*"  -delete
+  become: yes
+
+- name: "Find all file in etc/init.d to romove"
+  find:
+    paths: /etc/init.d/
+    patterns: "*dynaTraceServer*"
+  register: result
+
+- name: "Remove directory"
+  file:
+    path: "{{item.path}}"
+    state: absent
+  with_items: "{{result.files}}"
+  become: yes
+
+- name: "Remove server files"
+  file:
+    path: "{{item}}"
+    state: absent
+  with_items: ["/opt/{{ dynatrace_version }}/server", "/opt/{{ dynatrace_version }}/dtserver", "/opt/{{ dynatrace_version }}/dtserver.ini","/opt/{{ dynatrace_version }}/dtanalysisserver.ini", "/opt/{{ dynatrace_version }}/dtfrontendserver", "/opt/{{ dynatrace_version }}/dtfrontendserver.ini", "/opt/{{ dynatrace_version }}/dtanalysisserver"]
+  become: yes
+  
+- name: "Remove Dynatrace instaler script from /tmp"
+  file:
+    path: /tmp/run-dynatrace-server-installer.sh
+    state: absent
+  become: yes

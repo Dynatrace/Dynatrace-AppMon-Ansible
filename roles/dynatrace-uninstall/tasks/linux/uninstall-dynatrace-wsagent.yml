@@ -1,0 +1,30 @@
+---
+- name: Stop and disable running Dynatrace services
+  service:
+    name: dynaTraceWebServerAgent
+    state: stopped
+    enabled: no
+  ignore_errors: yes
+  become: yes
+
+- name: Sleep for 5 seconds...
+  pause:
+    seconds: 5
+ 
+- name: "Remove all link from rc*.d"
+  shell: sudo find -L /etc/ -xtype l -name "*dynaTraceWebServerAgent"  -delete
+  become: yes
+   
+- name: "Find all file in etc/init.d to romove"
+  find:
+    paths: /etc/init.d/
+    patterns: "*dynaTraceWebServerAgent*"
+  register: result
+
+- name: "Remove directory"
+  file:
+    path: "{{item.path}}"
+    state: absent
+  with_items: "{{result.files}}"
+  become: yes
+

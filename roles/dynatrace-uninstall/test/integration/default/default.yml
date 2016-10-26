@@ -1,0 +1,8 @@
+---
+- hosts: test-kitchen
+  roles: 
+  - role: Dynatrace-Server-Uninstall
+    dynatrace_server_linux_installer_file_name: dynatrace-server.jar
+    dynatrace_server_linux_installer_file_url: "http://10.0.2.2/dynatrace/6.3/{{ dynatrace_server_linux_installer_file_name }}"
+    dynatrace_server_do_pwh_connection: yes
+    dynatrace_server_pwh_connection_database: dynatrace-pwh 

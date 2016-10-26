@@ -1,0 +1,16 @@
+---
+dynatrace_install_dir: /opt
+dynatrace_version: dynatrace-6.5
+dynatrace_server_collector_port: 6699
+dynatrace_user: dynatrace
+dynatrace_collector_agent_port: 9998
+
+ansible_uninstall_server: yes
+ansible_uninstall_collector: no
+ansible_remove_dynatrace_user: yes
+ansible_remove_dynatrace_diretory: yes
+ansible_uninstall_client: no
+ansible_uninstall_agent: no
+ansible_uninstall_wsagent: no
+
+dynatrace_server_role_name: Dynatrace-Uninstall

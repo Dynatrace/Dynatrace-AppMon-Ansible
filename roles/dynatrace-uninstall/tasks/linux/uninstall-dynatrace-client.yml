@@ -1,0 +1,14 @@
+---
+- name: "Remove client files"
+  file:
+    path: "{{item}}"
+    state: absent
+  with_items: ["/opt/{{ dynatrace_version }}/client", "/opt/{{ dynatrace_version }}/dtclient", "/opt/{{ dynatrace_version }}/dtclient.ini.template"]
+  become: yes
+
+- name: "Remove Dynatrace instaler script from /tmp"
+  file:
+    path: /tmp/run-dynatrace-client-installer.sh
+    state: absent
+  become: yes
+

@@ -1,0 +1,16 @@
+---
+- hosts: test-kitchen
+  roles:
+  - role: Dynatrace-Server
+  - role: Dynatrace-Uninstall
+    ansible_uninstall_server: yes
+    ansible_uninstall_collector: no
+    ansible_uninstall_client: no
+    ansible_uninstall_wsagent: no
+    ansible_uninstall_agent: no
+    ansible_remove_dynatrace_user: yes
+    ansible_remove_dynatrace_diretory: yes
+  remote_user: ec2-user         # The remote SSH user that executes the tasks in the included roles
+
+
+

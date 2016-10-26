@@ -1,0 +1,7 @@
+---
+- name: "Remove Dynatrace user"
+  user:
+    name: "{{ dynatrace_user }}"
+    state: absent
+    remove: yes
+  become: yes

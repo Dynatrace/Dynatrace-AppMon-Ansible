@@ -1,0 +1,12 @@
+---
+- name: "Remove Dynatrace sublink from /opt"
+  file:
+    path: "{{ dynatrace_install_dir }}/dynatrace"
+    state: absent
+  become: yes
+
+- name: "Remove {{ dynatrace_version }} directory from /opt"
+  file:
+    path:  "{{ dynatrace_install_dir }}/{{ dynatrace_version }}"
+    state: absent
+  become: yes

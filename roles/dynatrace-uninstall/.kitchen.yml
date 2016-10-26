@@ -1,0 +1,18 @@
+---
+provisioner:
+  name: ansible_playbook
+  hosts: test-kitchen
+  require_ansible_repo: false
+  require_ansible_omnibus: true
+
+driver:
+  name: docker
+
+platforms:
+  - name: centos-6
+    driver_config:
+      provision_command:
+        - yum update -y
+        - yum install -y net-tools tar
+suites:
+  - name: default

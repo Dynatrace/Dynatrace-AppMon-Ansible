@@ -1,0 +1,23 @@
+---
+- include: linux/uninstall-dynatrace-server.yml
+  when: ansible_uninstall_server
+
+- include: linux/uninstall-dynatrace-collector.yml
+  when: ansible_uninstall_collector
+
+- include: linux/uninstall-dynatrace-client.yml
+  when: ansible_uninstall_client
+
+- include: linux/uninstall-dynatrace-agent.yml
+  when: ansible_uninstall_agent
+
+- include: linux/uninstall-dynatrace-wsagent.yml
+  when: ansible_uninstall_wsagent
+
+- include: linux/remove-dynatrace-directory.yml
+  when: ansible_remove_dynatrace_diretory
+
+- include: linux/remove-dynatrace-user.yml
+  when: ansible_remove_dynatrace_user
+
+

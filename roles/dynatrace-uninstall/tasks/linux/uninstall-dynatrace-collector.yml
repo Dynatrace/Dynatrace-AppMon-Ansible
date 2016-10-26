@@ -1,0 +1,45 @@
+---
+- name: Stop and disable running Dynatrace services
+  service:
+    name: dynaTraceCollector
+    state: stopped
+    enabled: no
+  ignore_errors: yes
+  become: yes
+
+- name: "Wait for the Dynatrace Collector to become unavailable via port {{ dynatrace_collector_agent_port }}"
+  wait_for:
+    port: "{{ dynatrace_collector_agent_port }}"
+    state: stopped
+  with_items: ["{{ dynatrace_collector_agent_port }}"]
+  become: yes
+  
+- name: "Remove all link from rc*.d"
+  shell: sudo find -L /etc/ -xtype l -name "*dynaTraceCollector"  -delete
+  become: yes
+
+- name: "Find all file in etc/init.d to romove"
+  find:
+    paths: /etc/init.d/
+    patterns: "*dynaTraceCollector*"
+  register: result
+
+- name: "Remove directory"
+  file:
+    path: "{{item.path}}"
+    state: absent
+  with_items: "{{result.files}}"
+  become: yes
+
+- name: "Remove collector files"
+  file:
+    path: "{{item}}"
+    state: absent
+  with_items: ["/opt/{{ dynatrace_version }}/collector", "/opt/{{ dynatrace_version }}/dtcollector", "/opt/{{ dynatrace_version }}/dtcollector.ini"]
+  become: yes
+   
+- name: "Remove Dynatrace instaler script from /tmp"
+  file:
+    path: /tmp/run-dynatrace-collector-installer.sh
+    state: absent
+  become: yes
