@@ -1,0 +1,10 @@
+---
+- name: "Uninstall Dynatrace OneAgent"
+  shell: "sh /opt/dynatrace/oneagent/agent/uninstall.sh"
+  sudo: yes
+
+- name: "Remove oneagent files"
+  file:
+    path: "/opt/dynatrace/oneagent"
+    state: absent
+  become: yes
