@@ -1,6 +1,3 @@
-[submodule "roles/dynatrace-agent-ansible"]
-	path = roles/dynatrace-agent-ansible
-	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-agent-ansible.git
 [submodule "roles/dynatrace-apache-httpd-agent-ansible"]
 	path = roles/dynatrace-apache-httpd-agent-ansible
 	url = ssh://git@bitbucket.lab.dynatrace.org/da/dynatrace-apache-httpd-agent-ansible.git
