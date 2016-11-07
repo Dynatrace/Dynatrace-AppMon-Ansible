@@ -14,4 +14,4 @@ ansible_uninstall_agent: no
 ansible_uninstall_wsagent: no
 ansible_uninstall_oneagent: no
 
-dynatrace_server_role_name: Dynatrace-Uninstall
+dynatrace_server_role_name: Dynatrace-Uninstall-Ansible
