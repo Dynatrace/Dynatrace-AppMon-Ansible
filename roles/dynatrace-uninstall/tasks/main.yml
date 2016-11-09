@@ -1,3 +1,0 @@
----
-- include: uninstall-dynatrace.yml
-  when: ansible_system == "Linux"
