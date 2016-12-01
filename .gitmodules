@@ -40,7 +40,4 @@
 [submodule "roles/Dynatrace.Dynatrace-WebServer-Agent"]
 	path = roles/Dynatrace.Dynatrace-WebServer-Agent
 	url = ../dynatrace-webserver-agent-ansible.git
-[submodule "roles/Dynatrace.Dynatrace-Uninstall"]
-	path = roles/Dynatrace.Dynatrace-Uninstall
-	url = ../dynatrace-uninstall-ansible.git
 	
