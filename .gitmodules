@@ -42,4 +42,5 @@
 	url = ../dynatrace-webserver-agent-ansible.git
 [submodule "roles/Dynatrace.Dynatrace-Uninstall"]
 	path = roles/Dynatrace.Dynatrace-Uninstall
-	url = ../dynatrace-update-ansible.git
+	url = ../dynatrace-uninstall-ansible.git
+	
