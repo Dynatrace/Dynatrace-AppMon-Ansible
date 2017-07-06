@@ -22,9 +22,6 @@
 [submodule "roles/Dynatrace.Dynatrace-NGINX-Agent"]
 	path = roles/Dynatrace.Dynatrace-NGINX-Agent
 	url = https://github.com/Dynatrace/dynatrace-nginx-agent-ansible.git
-[submodule "roles/Dynatrace.OneAgent"]
-	path = roles/Dynatrace.OneAgent
-	url = https://github.com/Dynatrace/dynatrace-oneagent-ansible.git
 [submodule "roles/Dynatrace.Dynatrace-Plugin"]
 	path = roles/Dynatrace.Dynatrace-Plugin
 	url = https://github.com/Dynatrace/dynatrace-plugin-ansible.git
