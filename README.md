@@ -31,7 +31,6 @@ Where *$product* is one of, or a comma-separated combination of the following [A
 | tomcat-agent       | [Dynatrace.Dynatrace-Tomcat-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-Tomcat-Agent) |
 | update             | [Dynatrace.Dynatrace-Update](https://galaxy.ansible.com/Dynatrace/Dynatrace-Update) |
 | wsagent            | [Dynatrace.Dynatrace-WebServer-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-WebServer-Agent) |
-| oneagent        | [Dynatrace.OneAgent](https://galaxy.ansible.com/Dynatrace/OneAgent) |
 
 ## Additional Resources
 
