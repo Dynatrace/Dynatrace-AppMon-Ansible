@@ -4,6 +4,9 @@
 [submodule "roles/Dynatrace.Dynatrace-Apache-HTTPD-Agent"]
 	path = roles/Dynatrace.Dynatrace-Apache-HTTPD-Agent
 	url = https://github.com/Dynatrace/dynatrace-apache-httpd-agent-ansible.git
+[submodule "roles/Dynatrace.Dynatrace-Appmon-OneAgent-Ansible"]
+	path = roles/Dynatrace.Dynatrace-Appmon-OneAgent-Ansible
+	url = https://github.com/Dynatrace/Dynatrace-Appmon-OneAgent-Ansible.git
 [submodule "roles/Dynatrace.Dynatrace-Client"]
 	path = roles/Dynatrace.Dynatrace-Client
 	url = https://github.com/Dynatrace/dynatrace-client-ansible.git
