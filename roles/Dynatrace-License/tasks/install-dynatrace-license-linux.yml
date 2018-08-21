@@ -1,0 +1,23 @@
+---
+- name: Check if a Dynatrace License is provided locally
+  local_action:
+    module: stat
+    path: "{{ playbook_dir }}/roles/{{ dynatrace_license_role_name }}/files/{{ dynatrace_license_file_name }}"
+  register: dynatrace_license_file_provided
+
+- name: Check if the Dynatrace License is provided by URL
+  local_action:
+    module: get_url
+    url: "{{ dynatrace_license_file_url }}"
+    dest: "{{ playbook_dir }}/roles/{{ dynatrace_license_role_name }}/files/{{ dynatrace_license_file_name }}"
+    force: yes
+  register: dynatrace_license_url_provided
+  ignore_errors: true
+  when: not dynatrace_license_file_provided.stat.exists
+
+- name: Fail if the Dynatrace License is not provided
+  fail:
+    msg: "The Dynatrace License is not provided at {{ playbook_dir }}/roles/{{ dynatrace_license_role_name }}/files/linux/{{ dynatrace_license_file_name }} and could not be downloaded from {{ dynatrace_license_file_url }}."
+  when: (not dynatrace_license_file_provided.stat.exists) and (dynatrace_license_url_provided.failed is defined and dynatrace_license_url_provided.failed)
+
+- include: linux/install-dynatrace-license.yml

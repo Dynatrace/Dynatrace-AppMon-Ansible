@@ -19,9 +19,9 @@
   ignore_errors: yes
   become: yes
 
-- name: Install package 'java-1.7.0-openjdk'
+- name: Install package 'java-1.8.0-openjdk'
   yum:
-    pkg: java-1.7.0-openjdk
+    pkg: java-1.8.0-openjdk
     state: present
   register: java_install
   when: which_java_cmd.rc != 0

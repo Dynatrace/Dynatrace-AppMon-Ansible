@@ -1,0 +1,9 @@
+---
+dynatrace_license_linux_dynatrace_install_dir: /opt/dynatrace
+dynatrace_license_linux_license_owner: dynatrace
+dynatrace_license_linux_license_group: dynatrace
+
+dynatrace_license_file_name: dynatrace-license.key
+dynatrace_license_file_url: http://localhost/dynatrace/dynatrace-license.key
+
+dynatrace_license_role_name: Dynatrace.Dynatrace-License
