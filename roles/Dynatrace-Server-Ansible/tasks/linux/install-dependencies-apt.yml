@@ -1,0 +1,34 @@
+---
+- name: Update APT cache
+  apt:
+    update_cache: yes
+  ignore_errors: yes
+  become: yes
+
+- name: Check if 'curl' is on the PATH
+  shell: which curl
+  register: which_curl_cmd
+  ignore_errors: yes
+  become: yes
+
+- name: Install package 'curl'
+  apt:
+    pkg: curl
+    state: present
+  register: curl_install
+  when: which_curl_cmd.rc != 0
+  become: yes
+
+- name: Check if 'java' is on the PATH
+  shell: which java
+  register: which_java_cmd
+  ignore_errors: yes
+  become: yes
+
+- name: Install package 'default-jre-headless'
+  apt:
+    pkg: default-jre-headless
+    state: present
+  register: java_install
+  when: which_java_cmd.rc != 0
+  become: yes

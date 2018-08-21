@@ -1,0 +1,3 @@
+---
+- include: install-dynatrace-server-linux.yml
+  when: ansible_system == "Linux"

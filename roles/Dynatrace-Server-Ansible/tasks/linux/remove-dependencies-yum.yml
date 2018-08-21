@@ -1,0 +1,16 @@
+---
+- name: Remove package 'curl'
+  yum:
+    name: curl
+    state: absent
+  ignore_errors: yes
+  when: not curl_install | skipped
+  become: yes
+
+- name: Remove package 'java-1.7.0-openjdk'
+  yum:
+    pkg: java-1.7.0-openjdk
+    state: absent
+  ignore_errors: yes
+  when: not java_install | skipped
+  become: yes
