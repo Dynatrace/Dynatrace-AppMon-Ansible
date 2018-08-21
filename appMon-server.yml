@@ -1,4 +1,4 @@
 ---
 - hosts: all
   roles:
-  - { role: Dynatrace-Agent, tags: agent }
+  - { role: Dynatrace-Server-Ansible, tags: agent }

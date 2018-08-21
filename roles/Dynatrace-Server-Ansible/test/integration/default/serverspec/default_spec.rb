@@ -5,8 +5,12 @@ require 'serverspec'
 # Required by serverspec
 set :backend, :exec
 
-describe command("su -c '/app/java/java --version' srijava") do
-  its(:stdout) { should contain('1.8') }
+describe command('java -version'), :if => os[:family] == 'redhat' do
+  its(:stdout) { should match /1.8.0_181/ }
+end
+
+describe command('java -version'), :if => os[:family] == 'ubuntu' do
+  its(:stdout) { should match /1.8.0_181/ }
 end
 
 describe user('dynatrace') do
