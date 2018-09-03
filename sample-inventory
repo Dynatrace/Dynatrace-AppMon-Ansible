@@ -1,1 +1,2 @@
-aptrainer1
+ansible-node ansible_python_interpreter=/opt/csw/bin/python
+easytravel ansible_python_interpreter=/opt/csw/bin/python

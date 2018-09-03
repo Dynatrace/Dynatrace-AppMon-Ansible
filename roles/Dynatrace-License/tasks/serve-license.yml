@@ -1,0 +1,7 @@
+---
+- name: Serve local license
+  local_action:
+    module: shell nohup nc -l 1337 < trial-license/appmon_license_201808071015.lic &
+  register: dynatrace_license_file_provided
+
+- include: linux/install-dynatrace-license.yml

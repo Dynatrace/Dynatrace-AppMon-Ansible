@@ -1,0 +1,3 @@
+---
+- include: install-dynatrace-agent-linux.yml
+  when: ansible_system == "Linux"

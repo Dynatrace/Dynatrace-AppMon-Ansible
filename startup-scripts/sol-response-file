@@ -1,0 +1,21 @@
+# Copyright 2004 Sun Microsystems, Inc.  All rights reserved.
+# Use is subject to license terms.
+#
+#ident  "@(#)default    1.7     04/12/21 SMI"
+#
+mail=
+instance=unique
+partial=ask
+runlevel=ask
+idepend=ask
+rdepend=ask
+space=ask
+setuid=ask
+conflict=ask
+action=ask
+networktimeout=60
+networkretries=3
+authentication=quit
+keystore=/var/sadm/security
+proxy=
+basedir=.
