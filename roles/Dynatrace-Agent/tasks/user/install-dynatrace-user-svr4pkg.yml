@@ -1,0 +1,29 @@
+---
+- name: "Check if group '{{ dynatrace_agent_group }}' already exists"
+  shell: "cat /etc/group | grep {{ dynatrace_agent_group }}"
+  become: yes
+  register: dynatrace_agent_group_exists
+  ignore_errors: yes
+
+- name: "Create '{{ dynatrace_agent_group }}' system user for {{ ansible_system }}"
+  command: "/usr/sbin/groupadd -g {{ dynatrace_agent_group_gid }} -o {{ dynatrace_agent_group }}"
+  become: yes
+  when: dynatrace_agent_group_exists.rc != 0
+- debug:
+    var: dynatrace_agent_group_exists
+    verbosity: 3
+
+- name: "Check if user '{{ dynatrace_agent_owner }}' already exists"
+  shell: "cat /etc/passwd | grep {{ dynatrace_agent_owner }}"
+  become: yes
+  register: dynatrace_agent_owner_exists
+  ignore_errors: yes
+
+# useradd will complain but will add anyway https://www.unix.com/solaris/108838-limit-solaris-username-lengths.html
+- name: "Create '{{ dynatrace_agent_owner }}' system user for '{{ ansible_system }}'"
+  command: "/usr/sbin/useradd -u {{ dynatrace_agent_owner_uid }} -G {{ dynatrace_agent_owner }} {{ dynatrace_agent_owner }}"
+  become: yes
+  when: dynatrace_agent_owner_exists.rc != 0
+- debug:
+    var: dynatrace_agent_owner_exists
+    verbosity: 3

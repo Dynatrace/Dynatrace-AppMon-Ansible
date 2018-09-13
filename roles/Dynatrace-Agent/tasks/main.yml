@@ -1,3 +1,22 @@
 ---
-- include: install-dynatrace-agent-linux.yml
-  when: ansible_system == "Linux"
+- name: Check if the Dynatrace installer is provided locally
+  local_action:
+    module: stat
+    path: "{{ playbook_dir }}/roles/{{ dynatrace_agent_role_name }}/files/linux/{{ dynatrace_agent_linux_installer_file_name }}"
+  register: dynatrace_agent_installer_file_provided
+
+- include_tasks: dependencies/install-dependencies-{{ ansible_pkg_mgr }}.yml
+
+- include: user/install-dynatrace-user-{{ ansible_pkg_mgr }}.yml
+
+- include: user/install-dynatrace-user-Linux.yml
+  when:  "ansible_pkg_mgr == 'yum' or  ansible_pkg_mgr == 'apt'"
+
+- include: agent/install-dynatrace-agent-{{ ansible_pkg_mgr }}.yml
+
+- include: dependencies/install-dependencies-{{ ansible_pkg_mgr }}.yml
+
+# BACKLOG:0 ensure full solaris support
+# BACKLOG:1 ensure tests run on docker
+# BACKLOG:2 convert to molecule
+# BACKLOG:3 windows support

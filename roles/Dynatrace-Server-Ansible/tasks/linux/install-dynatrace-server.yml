@@ -32,6 +32,7 @@
   get_url:
     url: "{{ dynatrace_server_linux_installer_file_url }}"
     dest: "{{ dynatrace_server_linux_install_dir }}"
+    validate_certs: false
   when: not dynatrace_server_installer_file_provided.stat.exists
   become: yes
 
@@ -39,6 +40,7 @@
   template:
     src: templates/linux/run-dynatrace-server-installer.sh.j2
     dest: /tmp/run-dynatrace-server-installer.sh
+  become: yes
 
 - name: Stop and disable running Dynatrace services
   service:

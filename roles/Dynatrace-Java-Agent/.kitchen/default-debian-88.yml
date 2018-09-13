@@ -1,0 +1,9 @@
+---
+username: kitchen
+ssh_key: "/Users/anthonykalinde/repos/Dynatrace-AppMon-Ansible/roles/Dynatrace-Java-Agent/.kitchen/docker_id_rsa"
+image_id: c569ee03fceb
+container_id: b4d81bc1872d98dd7ed68913c02201f49cb0016e79aece5b41e4edcd92ecee19
+hostname: localhost
+port: 32772
+last_action: create
+last_error: Kitchen::ActionFailed

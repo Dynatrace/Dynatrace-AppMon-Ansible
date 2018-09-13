@@ -1,0 +1,25 @@
+---
+- svr4pkg:
+    name: CSWpkgutil
+    src: 'http://get.opencsw.org/now'
+    state: present
+    zone: current
+  register: csw_install
+  become: yes
+
+- name: Check if 'java' is on the PATH
+  shell: which java
+  register: which_java_cmd
+  ignore_errors: yes
+  become: yes
+
+- svr4pkg:
+    name: jdk8
+    src: 'http://get.opencsw.org/now'
+    state: present
+    zone: current
+  register: java_install
+  when: which_java_cmd.rc != 0
+  become: yes
+
+# add get and set path and test java works before proceeding
