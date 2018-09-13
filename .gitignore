@@ -1,5 +1,7 @@
-.vagrant/*
-.kitchen/*
-.imdone/*
-notes/*
+.vagrant/
+.kitchen/
+.imdone/
+notes/
 .DS_Store
+journal/
+*.retry

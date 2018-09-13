@@ -1,2 +1,1 @@
-ansible-node ansible_python_interpreter=/opt/csw/bin/python
-easytravel ansible_python_interpreter=/opt/csw/bin/python
+sol1 ansible_python_interpreter=/opt/csw/bin/python
