@@ -1,0 +1,5 @@
+.vagrant/*
+.kitchen/*
+.imdone/*
+notes/*
+.DS_Store
