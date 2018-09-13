@@ -16,7 +16,7 @@
 - include_tasks: facts/set-java-facts.yml
   become: true
 
-- name: set java home to system profile
+- name: set java home to system etc profile
   blockinfile:
     path: "{{ system_profile_file }}"
     block: |
@@ -25,7 +25,7 @@
   when: java_home_path != ''
   become: yes
 
-- name: set java home to user profile
+- name: set java home in user home profile
   blockinfile:
     path: "{{ user_profile_file }}"
     block: |
