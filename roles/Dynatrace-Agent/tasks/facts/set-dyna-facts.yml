@@ -1,0 +1,22 @@
+---
+- name: "Check if we previously downladed the {{ dynatrace_agent_linux_installer_file_name }} installer"
+  stat:
+    path: "{{ dynatrace_agent_linux_root_dir }}/{{ dynatrace_agent_linux_installer_file_name }}"
+  register: dynatrace_agent_installer_downloaded
+
+- debug:
+    var: dynatrace_agent_installer_downloaded.stat.path
+  when: dynatrace_agent_installer_downloaded.stat.path != ''
+
+- name: Find installed version name
+  stat:
+    paths: "{{ dynatrace_agent_linux_root_dir }}/"
+    recurse: no
+    patterns: '(dynatrace)[\d-][7](.)[0]'
+    use_regex: yes
+    file_type: directory
+  register: dynatrace_agent_installed_version_dir
+
+- set_fact:
+     dynatrace_agent_installed_version_path: "{{ dynatrace_agent_installed_version_dir.files[0].path }}"
+  when: dynatrace_agent_installed_version_dir.msg != ''

@@ -1,0 +1,16 @@
+---
+- name: "Check if Java is installed"
+  shell: "find / -name jdk8 | grep java"
+  register: java_path
+  ignore_errors: yes
+  become: yes
+
+- set_fact:
+     java_home_path: "{{ java_path.stdout_lines[0] }}"
+  when: java_path.stdout != ''
+
+- set_fact:
+     jre_exe: "{{ java_path }}/jre/bin/java"
+  when: java_home_path != ''
+
+# sunos jre path in sunos vars

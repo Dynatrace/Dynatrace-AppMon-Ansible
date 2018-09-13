@@ -1,0 +1,19 @@
+---
+# BACKLOG create uninstall plays
+# BACKLOG check if installed
+# BACKLOG analyze if I need to use uninstaller or can just delete
+# BACKLOG add uninstall tags for more flexible playbook use
+
+- name: "stat dynatrace install dir"
+  stat:
+    path: "{{ dynatrace_agent_linux_install_dir }}/"
+  register: dynatrace_agent_linux_installed.stat.exists
+  become: yes
+
+
+- name: Change ownership of the installation directory if it had to be created
+  file:
+    path: "{{ dynatrace_agent_linux_install_dir }}"
+    state: absent
+  when: dynatrace_agent_linux_installed != 0
+  become: yes

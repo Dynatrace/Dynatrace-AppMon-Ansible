@@ -1,0 +1,5 @@
+---
+pkgutil_exe: "/opt/csw/bin/pkgutil"
+java_solaris_install_root_dir: /opt/csw/
+system_profile_file: "/etc/profile"
+user_profile_file: "/export/home/vagrant/.profile"
