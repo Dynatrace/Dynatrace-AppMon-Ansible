@@ -20,7 +20,7 @@
 # - include: dependencies/remove-dependencies-{{ ansible_pkg_mgr }}.yml
 
 # DONE:0 ensure full solaris support
-# TODO:0 TEST IDEMPOTENCE
+# TODO:10 TEST IDEMPOTENCE
 # TODO:20 ensure tests run on docker
-# TODO:10 convert to molecule
+# TODO:0 convert to molecule
 # BACKLOG:40 windows support
