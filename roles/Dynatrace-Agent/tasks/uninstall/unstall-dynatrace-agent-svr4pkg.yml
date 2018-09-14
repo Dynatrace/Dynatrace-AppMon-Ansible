@@ -1,9 +1,9 @@
 ---
-# BACKLOG create uninstall plays
-# BACKLOG check if installed
-# BACKLOG analyze if I need to use uninstaller or can just delete
-# BACKLOG add uninstall tags for more flexible playbook use
-
+# BACKLOG:70 create uninstall plays
+# DONE:10 check if installed
+# BACKLOG:60 analyze if I need to use uninstaller or can just delete
+# BACKLOG:50 add uninstall tags for more flexible playbook use
+# BACKLOG:30 Tags everywhere
 - name: "stat dynatrace install dir"
   stat:
     path: "{{ dynatrace_agent_linux_install_dir }}/"

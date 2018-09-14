@@ -5,6 +5,9 @@ galaxy_info:
   license: MIT
   min_ansible_version: 1.8
   platforms:
+  - name: SunOS
+    versions:
+    - 10
   - name: EL
     versions:
     - 6

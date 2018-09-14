@@ -16,6 +16,10 @@
 - include_tasks: facts/set-java-facts.yml
   become: true
 
+- set_fact:
+     jre_exe: "{{ java_home_path }}/jre/bin/java"
+  when: java_path is defined
+
 - name: set java home to system etc profile
   blockinfile:
     path: "{{ system_profile_file }}"

@@ -37,6 +37,7 @@ platforms:
         - apt-get install -y net-tools tar
         - export LC_ALL=C && curl -sSL https://raw.githubusercontent.com/neillturner/omnibus-ansible/d185d6849ac275e544614ab01bbb55b0cabbef8c/ansible_install.sh | sudo  bash
         - apt-get install openjdk-8-jdk  -y
-
+# BACKLOG:0 Add solaris docker platform
+# BACKLOG:10 Switch to molecule lets you hand craft the docker image
 suites:
   - name: default

@@ -5,12 +5,11 @@
   ignore_errors: yes
   become: yes
 
-- set_fact:
+- name: set home when java_path is defined
+  set_fact:
      java_home_path: "{{ java_path.stdout_lines[0] }}"
   when: java_path.stdout != ''
 
-- set_fact:
-     jre_exe: "{{ java_path }}/jre/bin/java"
-  when: java_home_path != ''
+# BACKLOG:80 user better find and set fact here
 
 # sunos jre path in sunos vars
