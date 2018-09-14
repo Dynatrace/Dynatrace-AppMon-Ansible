@@ -8,8 +8,8 @@
 - import_tasks: facts/set-dyna-facts.yml
   become: true
 
-# - include_tasks: dependencies/install-dependencies-{{ ansible_pkg_mgr }}.yml
-#
+- include_tasks: dependencies/install-dependencies-{{ ansible_pkg_mgr }}.yml
+
 # - include: user/install-dynatrace-user-{{ ansible_pkg_mgr }}.yml
 #
 # - include: user/install-dynatrace-user-Linux.yml
