@@ -1,0 +1,6 @@
+---
+- hosts: test-kitchen
+  roles:
+  - role: Dynatrace-Server-Ansible
+    dynatrace_server_do_pwh_connection: yes
+    dynatrace_server_pwh_connection_database: dynatrace-pwh

@@ -1,0 +1,18 @@
+Host home
+    VisualHostKey yes
+
+Host cloud*
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    LogLevel QUIET
+
+Host *
+    StrictHostKeyChecking ask
+    UserKnownHostsFile ~/.ssh/known_hosts
+    LogLevel INFO
+    ServerAliveInterval 120
+
+Host github.com
+	HostName github.com
+	User anthony.kalinde@gmail.com
+	IdentityFile /Users/anthonykalinde/.ssh/rot-github_key.pub

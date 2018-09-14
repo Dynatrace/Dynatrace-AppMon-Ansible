@@ -1,0 +1,13 @@
+---
+dynatrace_agent_linux_root_dir: /opt
+dynatrace_agent_linux_install_dir: "dynatrace" # final sym link thats created after install
+dynatrace_agent_linux_installer_file_name: "dynatrace-agent-7.0.0.2469-unix.jar"
+dynatrace_agent_linux_installer_file_url: "https://downloads.dynatrace.com/clientservices/agent?version=7.0.0.2469&os=linux&arch=x64&techtype=java_net"
+
+dynatrace_agent_owner: dynatrace
+dynatrace_agent_owner_uid: 101
+dynatrace_agent_group: dynatrace
+dynatrace_agent_group_gid: 101
+
+dynatrace_agent_role_name: Dynatrace-Agent
+removed_depenedencies: true

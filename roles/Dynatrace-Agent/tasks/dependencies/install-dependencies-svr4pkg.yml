@@ -1,0 +1,38 @@
+---
+- svr4pkg:
+    name: CSWpkgutil
+    src: 'http://get.opencsw.org/now'
+    state: present
+    zone: current
+  register: csw_install
+  become: yes
+
+- name: "Install Java if it is not already installed"
+  shell: "{{ pkgutil_exe }} -y -i jdk8"
+  register: java_install
+  when: java_path.stdout == ''
+  become: yes
+
+- include_tasks: facts/set-java-facts.yml
+  become: true
+
+- set_fact:
+     jre_exe: "{{ java_home_path }}/jre/bin/java"
+  when: java_path is defined
+
+- name: set java home to system etc profile
+  blockinfile:
+    path: "{{ system_profile_file }}"
+    block: |
+      export JAVA_HOME={{ java_home_path }}
+      export PATH=$PATH:$JAVA_HOME:bin:$JAVA_HOME/jre/bin
+  when: java_home_path != ''
+  become: yes
+
+- name: set java home in user home profile
+  blockinfile:
+    path: "{{ user_profile_file }}"
+    block: |
+      export JAVA_HOME={{ java_home_path }}
+      export PATH=$PATH:$JAVA_HOME:bin:$JAVA_HOME/jre/bin
+  when: java_home_path != ''

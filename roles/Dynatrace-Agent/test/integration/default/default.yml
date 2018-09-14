@@ -1,0 +1,6 @@
+---
+- hosts: test-kitchen
+  roles:
+  - role: Dynatrace-Agent
+    dynatrace_agent_linux_installer_file_name: dynatrace-agent.jar
+    dynatrace_agent_linux_installer_file_url: "http://10.0.2.2/dynatrace/6.3/{{ dynatrace_agent_linux_installer_file_name }}"

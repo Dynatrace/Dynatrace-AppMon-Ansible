@@ -1,0 +1,6 @@
+---
+- hosts: test-kitchen
+  roles:
+  - role: Dynatrace-Java-Agent
+    dynatrace_agents_linux_installer_file_url: http://10.0.2.2/dynatrace/6.3/dynatrace-agent.jar
+    dynatrace_java_agent_env_var_file_name: /tmp/environment

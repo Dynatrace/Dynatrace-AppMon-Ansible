@@ -1,0 +1,6 @@
+---
+- name: "Install system user '{{ dynatrace_agent_owner }}'"
+  user:
+    name: "{{ dynatrace_agent_owner }}"
+    system: yes
+  become: yes

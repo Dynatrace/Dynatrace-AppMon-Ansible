@@ -1,0 +1,81 @@
+---
+- name: "Copy the Dynatrace installer to {{ dynatrace_agent_linux_root_dir }} if the installer is provided locally"
+  copy:
+    src: "{{ playbook_dir }}/roles/{{ dynatrace_agent_role_name }}/files/linux/{{ dynatrace_agent_linux_installer_file_name }}"
+    dest: "{{ dynatrace_agent_linux_root_dir }}/"
+  when: (dynatrace_agent_installer_file_provided is not defined)
+  become: yes
+
+- name: "Download the Dynatrace installer to {{ dynatrace_agent_linux_root_dir }} if the installer is not provided locally"
+  get_url:
+    url: "{{ dynatrace_agent_linux_installer_file_url }}"
+    dest: "{{ dynatrace_agent_linux_root_dir }}"
+    owner: "{{ dynatrace_agent_owner }}"
+    group: "{{ dynatrace_agent_group }}"
+    mode: u+rwx
+    validate_certs: False
+  when:
+    - dynatrace_agent_installer_file_provided.stat.exists == false
+    - dynatrace_agent_installer_downloaded.stat.exists == false 
+  become: yes
+
+- name: Install the Dynatrace Agent
+  shell: "{{ jre_exe }} -jar {{ dynatrace_agent_linux_installer_file_name }} -y"
+  args:
+    chdir: "{{ dynatrace_agent_linux_root_dir }}"
+    executable: /usr/bin/bash
+  become: yes
+  become_user: root
+  when:
+    - (dynatrace_agent_installed_version_dir.matched == 0 and dynatrace_agent_extract_install_dir.matched == 0)
+
+- name: Get install dir
+  find:
+    paths: "{{ dynatrace_agent_linux_root_dir }}"
+    recurse: no
+    patterns: '(dynatrace)[\d-][7](.)[0]'
+    use_regex: yes
+    file_type: directory
+  register: dynatrace_agent_install_dir
+
+- name: "set install dir"
+  set_fact:
+    dynatrace_agent_installed_path: "{{ dynatrace_agent_install_dir.files[0].path }}"
+  when: dynatrace_agent_install_dir is defined
+
+- name: Change ownership of the installation directory
+  file:
+    path: "{{ dynatrace_agent_installed_path }}"
+    owner: "{{ dynatrace_agent_owner }}"
+    group: "{{ dynatrace_agent_group }}"
+    state: directory
+    recurse: yes
+  become: yes
+
+- name: Change mode of the installation directory
+  file:
+    path: "{{ dynatrace_agent_installed_path }}"
+    mode: 0775
+  become: yes
+
+- name: "Create a symlink of the actual installation directory to {{ dynatrace_agent_linux_install_dir }}/dynatrace"
+  file:
+    src: "{{ dynatrace_agent_installed_path }}"
+    dest: "{{ dynatrace_agent_linux_root_dir }}/{{ dynatrace_agent_linux_install_dir }}"
+    owner: "{{ dynatrace_agent_owner }}"
+    group: "{{ dynatrace_agent_group }}"
+    mode: 0775
+    state: link
+  become: yes
+
+- name: Remove the Dynatrace Agent installer
+  file:
+    path: "{{ dynatrace_agent_linux_root_dir }}/{{ dynatrace_agent_linux_installer_file_name }}"
+    state: absent
+  become: yes
+
+- name: Update Dynatrace NGINX symbol offsets file
+  unarchive:
+    src: linux/dtnginx_offsets.json.tar.gz
+    dest: "{{ dynatrace_agent_installed_path }}/agent/conf"
+  become: yes

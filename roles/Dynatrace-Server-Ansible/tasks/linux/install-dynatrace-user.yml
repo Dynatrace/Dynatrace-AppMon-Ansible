@@ -1,0 +1,4 @@
+---
+- name: "Install system user '{{ dynatrace_server_owner }}'"
+  shell: useradd -d /home/dynatrace -m -s /bin/bash -c "dynatrace lol" dynatrace
+  become: yes

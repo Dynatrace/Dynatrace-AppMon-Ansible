@@ -1,0 +1,15 @@
+---
+dynatrace_java_agent_env_var_name: JAVA_OPTS
+dynatrace_java_agent_env_var_file_name: 
+dynatrace_java_agent_env_var_file_insert_after: BOF
+
+dynatrace_java_agent_name: java-agent
+dynatrace_java_agent_collector_hostname: localhost
+dynatrace_java_agent_collector_port: 9998
+
+dynatrace_java_agent_state: present
+
+dynatrace_java_agent_linux_agent_path: "{{ dynatrace_agent_linux_install_dir }}/dynatrace/agent/lib64/libdtagent.so"
+
+# Do not change anything below unless you know what you are doing!
+dynatrace_java_agent_agentpath_string: -agentpath:{{ dynatrace_java_agent_linux_agent_path }}=name={{ dynatrace_java_agent_name }},collector={{ dynatrace_java_agent_collector_hostname }}:{{ dynatrace_java_agent_collector_port }}

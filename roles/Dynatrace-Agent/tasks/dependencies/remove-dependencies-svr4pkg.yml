@@ -1,0 +1,6 @@
+---
+- svr4pkg:
+    name: jdk8
+    src: 'http://get.opencsw.org/now'
+    state: absent
+    zone: current

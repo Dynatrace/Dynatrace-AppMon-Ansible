@@ -1,0 +1,29 @@
+---
+dynatrace_server_installer_bitsize: 64
+
+dynatrace_server_linux_install_dir: /opt
+dynatrace_server_linux_installer_file_name: dynatrace-server-7.0.0.2469-linux-x86.jar
+dynatrace_server_linux_installer_file_url: "https://files.dynatrace.com/downloads/OnPrem/dynaTrace/7.0/7.0.0.2469/{{ dynatrace_server_linux_installer_file_name }}"
+
+dynatrace_server_agent_listen_port: 9998
+
+dynatrace_server_services_do_startup: yes
+
+dynatrace_server_do_pwh_connection: no
+dynatrace_server_pwh_connection_hostname: localhost
+dynatrace_server_pwh_connection_port: 5432
+dynatrace_server_pwh_connection_dbms: postgresql
+dynatrace_server_pwh_connection_database: dynatrace
+dynatrace_server_pwh_connection_username: dynatrace
+dynatrace_server_pwh_connection_password: dynatrace
+
+dynatrace_server_owner: dynatrace
+dynatrace_server_group: dynatrace
+
+dynatrace_server_role_name: Dynatrace.Dynatrace-Server
+
+dynatrace_server_pwh_url: https://localhost:8021/rest/management/pwhconnection/config.json
+dynatrace_server_user: "admin"
+dynatrace_server_password: "admin"
+
+dynatrace_session_storage_directory: sessions/stored

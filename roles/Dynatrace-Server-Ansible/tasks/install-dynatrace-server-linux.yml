@@ -1,0 +1,16 @@
+---
+- name: Check if the Dynatrace installer is provided locally
+  local_action:
+    module: stat
+    path: "{{ playbook_dir }}/roles/{{ dynatrace_server_role_name }}/files/linux/{{ dynatrace_server_linux_installer_file_name }}"
+  register: dynatrace_server_installer_file_provided
+
+- include_tasks: linux/install-dependencies-{{ ansible_system }}.yml
+
+- include_tasks: linux/install-dynatrace-user.yml
+- include: linux/install-dynatrace-server.yml
+
+# - include: install-dynatrace-pwh-connection.yml
+#   when: dynatrace_server_do_pwh_connection and dynatrace_server_services_do_startup
+#
+# - include_tasks: linux/remove-dependencies-{{ ansible_system }}.yml

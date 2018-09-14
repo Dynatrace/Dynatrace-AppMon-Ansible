@@ -1,0 +1,32 @@
+---
+- name: Check if 'curl' is on the PATH
+  shell: which curl
+  register: which_curl_cmd
+  ignore_errors: yes
+  become: yes
+
+- name: install curl
+  svr4pkg:
+    name: curl
+    src: 'http://get.opencsw.org/now'
+    state: present
+    zone: current
+  register: curl_install
+  when: which_curl_cmd.rc != 0
+  become: yes
+
+- name: Check if 'java' is on the PATH
+  shell: which java
+  register: which_java_cmd
+  ignore_errors: yes
+  become: yes
+
+- name: install jdk
+  svr4pkg:
+    name: jdk
+    src: 'http://get.opencsw.org/now'
+    state: present
+    zone: current
+  register: java_install
+  when: which_java_cmd.rc != 0
+  become: yes

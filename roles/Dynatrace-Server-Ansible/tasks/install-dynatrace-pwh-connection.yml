@@ -1,0 +1,31 @@
+---
+- name: Wait for the Dynatrace Server to become available via port 8021
+  wait_for:
+    port: 8021
+    state: present
+  become: yes
+
+- name: Compose message for establishing the Dynatrace Server's Performance Warehouse connection
+  set_fact: 
+    dynatrace_server_set_pwh_connection_message:
+      host: "{{ dynatrace_server_pwh_connection_hostname }}"
+      port: "{{ dynatrace_server_pwh_connection_port }}"
+      dbms: "{{ dynatrace_server_pwh_connection_dbms }}"
+      dbname: "{{ dynatrace_server_pwh_connection_database }}"
+      user: "{{ dynatrace_server_pwh_connection_username }}"
+      password: "{{ dynatrace_server_pwh_connection_password }}"
+      usessl: false
+      useurl: false
+      url: null
+
+- name: Establish the Dynatrace Server's Performance Warehouse connection
+  uri:
+    url: "{{ dynatrace_server_pwh_url }}"
+    method: PUT
+    user: "{{ dynatrace_server_user }}"
+    password: "{{ dynatrace_server_password }}"
+    body: "{{ dynatrace_server_set_pwh_connection_message | to_json }}"
+    force_basic_auth: yes
+    body_format: json
+    validate_certs: no
+  ignore_errors: yes

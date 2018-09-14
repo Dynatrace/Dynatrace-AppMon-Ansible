@@ -1,0 +1,17 @@
+---
+- name: Check if the Dynatrace installation directory exists
+  stat:
+    path: "{{ dynatrace_license_linux_dynatrace_install_dir }}/server/conf"
+  register: dynatrace_license_linux_dynatrace_install_dir_exists
+  become: yes
+
+- name: Install the Dynatrace license
+  copy:
+    src: "{{ playbook_dir }}/roles/{{ dynatrace_license_role_name }}/files/{{ dynatrace_license_file_name }}"
+    dest: "{{ dynatrace_license_linux_dynatrace_install_dir }}/server/conf/dtlicense.key"
+    owner: "{{ dynatrace_license_linux_license_owner }}"
+    group: "{{ dynatrace_license_linux_license_group }}"
+    mode: 0600
+    backup: yes
+  failed_when: not dynatrace_license_linux_dynatrace_install_dir_exists.stat.exists
+  become: yes

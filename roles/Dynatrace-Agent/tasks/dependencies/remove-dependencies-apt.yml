@@ -1,0 +1,8 @@
+---
+- name: Remove package 'default-jre-headless'
+  apt:
+    pkg: default-jre-headless
+    state: absent
+  when: not java_install | skipped
+  ignore_errors: yes
+  become: yes
