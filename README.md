@@ -1,4 +1,4 @@
-# Dynatrace-Ansible
+# Dynatrace-AppMon-Ansible
 
 A collection of [Ansible Roles](http://docs.ansible.com/playbooks_roles.html) for automated deployments of Dynatrace products.
 
