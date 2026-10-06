@@ -1,3 +1,13 @@
+> [!IMPORTANT]
+> **This repository is archived and no longer maintained or supported.**
+>
+> - **Archived:** 2026-10-06
+> - **Reason:** AppMon product EOL
+> - **Replacement:** None
+>
+> Preserved for historical and migration reference only. No updates, including security updates, will be provided.
+> See the [Dynatrace Archive organization README](https://github.com/Dynatrace-Archive) for usage and security guidance.
+
 # Dynatrace-AppMon-Ansible
 
 A collection of [Ansible Roles](http://docs.ansible.com/playbooks_roles.html) for automated deployments of Dynatrace products.
